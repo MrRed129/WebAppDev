@@ -1,7 +1,7 @@
 fetch("https://jsonplaceholder.typicode.com/todos")
   .then(response => response.json())
   .then(data => {
-    const totalCompleted = data.reduce((foo, acc) => {
+    const totalCompleted = data.reduce((acc, foo) => {
       if (foo.completed) {
         acc[foo.userId] === undefined
           ? (acc[foo.userId] = 1)
